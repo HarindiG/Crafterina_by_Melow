@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Crafterina by Melow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-image">
+                    <img src="images/logo.png" alt="Crafterina by Melow Logo">
+                </div>
+                <span class="logo-text">Crafterina by Melow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link active" data-translate="nav-about">About Us</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('si')">සිං</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="about-section">
+                <header class="about-header">
+                    <h1 data-translate="about-title">About Crafterina by Melow</h1>
+                    <p class="subtitle" data-translate="about-subtitle">Handcrafted with love, creativity, and tradition</p>
+                </header>
+
+                <div class="about-content">
+                    <div class="about-founder">
+                        <div class="founder-image">
+                            <img src="images/me.jpg" alt="Harindi Gamage - Founder of Crafterina by Melow">
+                        </div>
+                        <div class="founder-story">
+                            <h2 data-translate="founder-title">Meet Our Founder</h2>
+                            <p data-translate="founder-intro">Hi, I'm Harindi Gamage! I'm working as a government officer, and for my pleasure, I started this beautiful business of creating handcrafted resin items.</p>
+                            
+                            <p data-translate="founder-story">What began as a personal hobby has grown into something truly special. I discovered my passion for resin crafting and decided to share this beautiful art form with others. Now I'm not only creating unique pieces but also teaching resin classes to help others discover their creative potential.</p>
+                            
+                            <p data-translate="founder-mission">My mission is to bring joy and beauty into people's lives through carefully crafted resin creations. Each piece I make carries a piece of my heart and dedication to quality craftsmanship.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-story">
+                        <h2 data-translate="story-title">Our Story</h2>
+                        <p data-translate="story-para1">Crafterina by Melow was born from a deep passion for traditional craftsmanship and a desire to bring unique, handcrafted treasures to homes around the world. What started as a small hobby has grown into a beloved collection of carefully crafted pieces, each telling its own story.</p>
+                        
+                        <p data-translate="story-para2">Every item in our collection is created with attention to detail, using techniques passed down through generations. We believe in the beauty of imperfection and the charm of handmade items that carry the warmth of human touch.</p>
+                    </div>
+
+                    <div class="about-mission">
+                        <h2 data-translate="mission-title">Our Mission</h2>
+                        <p data-translate="mission-para">We are committed to preserving traditional crafting techniques while creating beautiful, functional pieces that bring joy and warmth to your home. Our mission is to connect people with the authentic beauty of handcrafted items, celebrating the artistry and skill that goes into each creation.</p>
+                    </div>
+
+                    <div class="about-values">
+                        <h2 data-translate="values-title">Our Values</h2>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <h3 data-translate="value-authenticity">Authenticity</h3>
+                                <p data-translate="value-authenticity-desc">Every piece is genuinely handcrafted, ensuring authenticity and uniqueness in every item.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3 data-translate="value-sustainability">Sustainability</h3>
+                                <p data-translate="value-sustainability-desc">We use natural materials and sustainable practices, respecting both tradition and the environment.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3 data-translate="value-quality">Quality</h3>
+                                <p data-translate="value-quality-desc">We never compromise on quality, ensuring each piece meets our high standards of craftsmanship.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3 data-translate="value-community">Community</h3>
+                                <p data-translate="value-community-desc">We support local artisans and traditional crafts, helping to preserve cultural heritage.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-process">
+                        <h2 data-translate="process-title">Our Process</h2>
+                        <p data-translate="process-intro">Each item in our collection goes through a careful process of creation:</p>
+                        <ul>
+                            <li><strong data-translate="process-design">Design:</strong> <span data-translate="process-design-desc">Every piece starts with inspiration and careful planning</span></li>
+                            <li><strong data-translate="process-selection">Selection:</strong> <span data-translate="process-selection-desc">We carefully choose the finest natural materials</span></li>
+                            <li><strong data-translate="process-crafting">Crafting:</strong> <span data-translate="process-crafting-desc">Each item is handcrafted with traditional techniques</span></li>
+                            <li><strong data-translate="process-quality">Quality Check:</strong> <span data-translate="process-quality-desc">Every piece is inspected for quality and beauty</span></li>
+                            <li><strong data-translate="process-packaging">Packaging:</strong> <span data-translate="process-packaging-desc">Items are carefully packaged to preserve their beauty</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="about-services">
+                        <h2 data-translate="services-title">Our Services</h2>
+                        <div class="services-grid">
+                            <div class="service-item">
+                                <h3 data-translate="service-custom">Custom Creations</h3>
+                                <p data-translate="service-custom-desc">Personalized resin items made to your specifications and preferences.</p>
+                            </div>
+                            <div class="service-item">
+                                <h3 data-translate="service-classes">Resin Classes</h3>
+                                <p data-translate="service-classes-desc">Learn the art of resin crafting through our hands-on classes and workshops.</p>
+                            </div>
+                            <div class="service-item">
+                                <h3 data-translate="service-bulk">Bulk Orders</h3>
+                                <p data-translate="service-bulk-desc">Special pricing and customization for weddings, events, and large orders.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-contact">
+                        <h2 data-translate="contact-title">Get in Touch</h2>
+                        <p data-translate="contact-intro">We'd love to hear from you! Whether you have questions about our products, want to place a custom order, or just want to say hello, we're here to help.</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h3 data-translate="contact-whatsapp">WhatsApp</h3>
+                                <p>+94 75 030 9299</p>
+                                <a href="https://wa.me/94750309299" class="contact-btn" target="_blank" data-translate="contact-message">Message Us</a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h3 data-translate="contact-follow">Follow Us</h3>
+                                <p data-translate="contact-follow-desc">Stay updated with our latest creations</p>
+                                <div class="social-buttons">
+                                    <a href="https://www.instagram.com/crafterina_by_melow_" class="social-btn">Instagram</a>
+                                    <a href="https://www.facebook.com/crafterinaByMelow" class="social-btn">Facebook</a>
+                                    <a href="https://www.tiktok.com/@crafterina_by_melow" class="social-btn">Tiktok</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crafterina by Melow</h4>
+                    <p data-translate="footer-tagline">Handcrafted with love and creativity</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact">Contact</h4>
+                    <p>WhatsApp: +94 75 030 9299</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-follow">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/crafterina_by_melow_" class="social-link">Instagram</a>
+                        <a href="https://www.facebook.com/crafterinaByMelow" class="social-link">Facebook</a>
+                        <a href="https://www.tiktok.com/@crafterina_by_melow" class="social-link">Tiktok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer-copyright">&copy; 2024 Crafterina by Melow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                // Navigation
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                
+                // About Page
+                'about-title': 'About Crafterina by Melow',
+                'about-subtitle': 'Handcrafted with love, creativity, and tradition',
+                
+                // Founder Section
+                'founder-title': 'Meet Our Founder',
+                'founder-intro': 'Hi, I\'m Harindi Gamage! I\'m working as a government officer, and for my pleasure, I started this beautiful business of creating handcrafted resin items.',
+                'founder-story': 'What began as a personal hobby has grown into something truly special. I discovered my passion for resin crafting and decided to share this beautiful art form with others. Now I\'m not only creating unique pieces but also teaching resin classes to help others discover their creative potential.',
+                'founder-mission': 'My mission is to bring joy and beauty into people\'s lives through carefully crafted resin creations. Each piece I make carries a piece of my heart and dedication to quality craftsmanship.',
+                
+                // Story Section
+                'story-title': 'Our Story',
+                'story-para1': 'Crafterina by Melow was born from a deep passion for traditional craftsmanship and a desire to bring unique, handcrafted treasures to homes around the world. What started as a small hobby has grown into a beloved collection of carefully crafted pieces, each telling its own story.',
+                'story-para2': 'Every item in our collection is created with attention to detail, using techniques passed down through generations. We believe in the beauty of imperfection and the charm of handmade items that carry the warmth of human touch.',
+                
+                // Mission Section
+                'mission-title': 'Our Mission',
+                'mission-para': 'We are committed to preserving traditional crafting techniques while creating beautiful, functional pieces that bring joy and warmth to your home. Our mission is to connect people with the authentic beauty of handcrafted items, celebrating the artistry and skill that goes into each creation.',
+                
+                // Values Section
+                'values-title': 'Our Values',
+                'value-authenticity': 'Authenticity',
+                'value-authenticity-desc': 'Every piece is genuinely handcrafted, ensuring authenticity and uniqueness in every item.',
+                'value-sustainability': 'Sustainability',
+                'value-sustainability-desc': 'We use natural materials and sustainable practices, respecting both tradition and the environment.',
+                'value-quality': 'Quality',
+                'value-quality-desc': 'We never compromise on quality, ensuring each piece meets our high standards of craftsmanship.',
+                'value-community': 'Community',
+                'value-community-desc': 'We support local artisans and traditional crafts, helping to preserve cultural heritage.',
+                
+                // Process Section
+                'process-title': 'Our Process',
+                'process-intro': 'Each item in our collection goes through a careful process of creation:',
+                'process-design': 'Design:',
+                'process-design-desc': 'Every piece starts with inspiration and careful planning',
+                'process-selection': 'Selection:',
+                'process-selection-desc': 'We carefully choose the finest natural materials',
+                'process-crafting': 'Crafting:',
+                'process-crafting-desc': 'Each item is handcrafted with traditional techniques',
+                'process-quality': 'Quality Check:',
+                'process-quality-desc': 'Every piece is inspected for quality and beauty',
+                'process-packaging': 'Packaging:',
+                'process-packaging-desc': 'Items are carefully packaged to preserve their beauty',
+                
+                // Services Section
+                'services-title': 'Our Services',
+                'service-custom': 'Custom Creations',
+                'service-custom-desc': 'Personalized resin items made to your specifications and preferences.',
+                'service-classes': 'Resin Classes',
+                'service-classes-desc': 'Learn the art of resin crafting through our hands-on classes and workshops.',
+                'service-bulk': 'Bulk Orders',
+                'service-bulk-desc': 'Special pricing and customization for weddings, events, and large orders.',
+                
+                // Contact Section
+                'contact-title': 'Get in Touch',
+                'contact-intro': 'We\'d love to hear from you! Whether you have questions about our products, want to place a custom order, or just want to say hello, we\'re here to help.',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-message': 'Message Us',
+                'contact-follow': 'Follow Us',
+                'contact-follow-desc': 'Stay updated with our latest creations',
+                
+                // Footer
+                'footer-tagline': 'Handcrafted with love and creativity',
+                'footer-contact': 'Contact',
+                'footer-follow': 'Follow Us',
+                'footer-copyright': '© 2024 Crafterina by Melow. All rights reserved.'
+            },
+            si: {
+                // Navigation
+                'nav-home': 'මුල් පිටුව',
+                'nav-about': 'අප ගැන',
+                
+                // About Page
+                'about-title': 'ක්‍රැෆ්ටරිනා බයි මෙලෝ ගැන',
+                'about-subtitle': 'ආදරයෙන්, නිර්මාණශීලීත්වයෙන් සහ සම්ප්‍රදායෙන් සාදන ලද',
+                
+                // Founder Section
+                'founder-title': 'අපගේ නිර්මාතෘවරිය හමුවෙන්න',
+                'founder-intro': 'ආයුබෝවන්, මම හරින්දි ගමගේ! මම රජයේ නිලධාරිනියක් ලෙස සේවය කරන අතර, මගේ සතුට සඳහා මම මෙම අතින් සාදන ලද රෙසින් භාණ්ඩ සෑදීමේ සුන්දර ව්‍යාපාරය ආරම්භ කළෙමි.',
+                'founder-story': 'පෞද්ගලික විනෝදාංශයක් ලෙස ආරම්භ වූ දෙයක් ඇත්තෙන්ම විශේෂ දෙයක් බවට පත් විය. මම රෙසින් කලාවේ මගේ උනන්දුව සොයා ගත් අතර මෙම සුන්දර කලා ශිල්පය අනෙක් අය සමඟ බෙදා ගැනීමට තීරණය කළෙමි. දැන් මම අද්විතීය කෑල්ල් සෑදීම පමණක් නොව අනෙක් අය ඔවුන්ගේ නිර්මාණශීලී හැකියාව සොයා ගැනීමට උදව් කිරීමසඳහා රෙසින් පන්ති පවා ඉගැන්වීම් කරමි.',
+                'founder-mission': 'මගේ මෙහෙවර වන්නේ හොඳින් සාදන ලද රෙසින් නිර්මාණ හරහා මිනිසුන්ගේ ජීවිතවලට සතුට සහ අලංකාරය ගෙන ඒමයි. මම සෑදෙන සෑම කෑල්ලක්ම මගේ හදවතේ කොටසක් සහ උසස් තත්ත්වයේ කලාවට කැපවීමක් ගෙන යයි.',
+                
+                // Story Section
+                'story-title': 'අපගේ කතාව',
+                'story-para1': 'ක්‍රැෆ්ටරිනා බයි මෙලෝ ලොව පුරා නිවස්වලට අද්විතීය, අතින් සාදන ලද නිධන් ගෙන ඒමේ ගැඹුරු උනන්දුවක් සහ සම්ප්‍රදායික කලාවට ඇති ආශාවෙන් උපත ලැබීය. කුඩා විනෝදාංශයක් ලෙස ආරම්භ වූ දෙයක් ප්‍රේමණීය, හොඳින් සාදන ලද කෑල්ල් සංග්‍රහයක් බවට පත් විය.',
+                'story-para2': 'අපගේ සංග්‍රහයේ සෑම භාණ්ඩයක්ම පරම්පරා ගණනක් තිබී ආ තාක්ෂණික ක්‍රියාවලීන් භාවිතා කර සැලකිල්ලෙන් සාදන ලද අතර. අපි අසම්පූර්ණත්වයේ අලංකාරය සහ මානව ස්පර්ශයේ උණුසුම ගෙන යන අතින් සාදන ලද භාණ්ඩවල ආකර්ෂණය විශ්වාස කරමු.',
+                
+                // Mission Section
+                'mission-title': 'අපගේ මෙහෙවර',
+                'mission-para': 'ඔබේ නිවසට සතුට සහ උණුසුම ගෙන ඒමේ ලස්සන, ක්‍රියාත්මක කෑල්ල් සෑදීමේදී සම්ප්‍රදායික කලා තාක්ෂණික ක්‍රියාවලීන් සංරක්ෂණය කිරීමට අපි කැපවී සිටිමු. අපගේ මෙහෙවර වන්නේ මිනිසුන්ව අතින් සාදන ලද භාණ්ඩවල සත්‍ය අලංකාරය සමඟ සම්බන්ධ කිරීමයි.',
+                
+                // Values Section
+                'values-title': 'අපගේ අගයන්',
+                'value-authenticity': 'සත්‍යත්වය',
+                'value-authenticity-desc': 'සෑම කෑල්ලක්ම සැබවින්ම අතින් සාදන ලද අතර, සෑම භාණ්ඩයකම සත්‍යත්වය සහ අද්විතීයත්වය සහතික කරයි.',
+                'value-sustainability': 'ස්ථිරභාවය',
+                'value-sustainability-desc': 'අපි ස්වාභාවික ද්‍රව්‍ය සහ ස්ථිර භාවිතයන් භාවිතා කරමු, සම්ප්‍රදාය සහ පරිසරය ගෞරව කරමින්.',
+                'value-quality': 'තත්ත්වය',
+                'value-quality-desc': 'අපි කිසිවිටෙකත් තත්ත්වය පිළිබඳව සමාව නොදෙමු, සෑම කෑල්ලක්ම අපගේ උසස් කලා තත්ත්වයන් සපුරාලන බව සහතික කරමු.',
+                'value-community': 'සමාජය',
+                'value-community-desc': 'අපි දේශීය කලාකරුවන් සහ සම්ප්‍රදායික කලාවන් සඳහා සහාය වෙමු, සංස්කෘතික උරුමය සංරක්ෂණය කිරීමට උදව් කරමු.',
+                
+                // Process Section
+                'process-title': 'අපගේ ක්‍රියාවලිය',
+                'process-intro': 'අපගේ සංග්‍රහයේ සෑම භාණ්ඩයක්ම සෑදීමේ හොඳින් සැලසුම් කරන ලද ක්‍රියාවලියක් හරහා යයි:',
+                'process-design': 'සැලසුම:',
+                'process-design-desc': 'සෑම කෑල්ලක්ම ආශාව සහ හොඳින් සැලසුම් කිරීමකින් ආරම්භ වේ',
+                'process-selection': 'තේරීම:',
+                'process-selection-desc': 'අපි හොඳම ස්වාභාවික ද්‍රව්‍ය හොඳින් තෝරා ගනිමු',
+                'process-crafting': 'සෑදීම:',
+                'process-crafting-desc': 'සෑම භාණ්ඩයක්ම සම්ප්‍රදායික තාක්ෂණික ක්‍රියාවලීන් සමඟ අතින් සාදන ලද අතර',
+                'process-quality': 'තත්ත්ව පරීක්ෂාව:',
+                'process-quality-desc': 'සෑම කෑල්ලක්ම තත්ත්වය සහ අලංකාරය සඳහා පරීක්ෂා කරනු ලැබේ',
+                'process-packaging': 'ඇසුරුම් කිරීම:',
+                'process-packaging-desc': 'භාණ්ඩ ඒවායේ අලංකාරය සංරක්ෂණය කිරීම සඳහා හොඳින් ඇසුරුම් කරනු ලැබේ',
+                
+                // Services Section
+                'services-title': 'අපගේ සේවා',
+                'service-custom': 'විශේෂිත නිර්මාණ',
+                'service-custom-desc': 'ඔබේ විශේෂඥතා සහ අභිරුචි අනුව සාදන ලද පෞද්ගලික රෙසින් භාණ්ඩ.',
+                'service-classes': 'රෙසින් පන්ති',
+                'service-classes-desc': 'අපගේ අත්වැඩ පන්ති සහ වැඩමුළු හරහා රෙසින් කලාව ඉගෙන ගන්න.',
+                'service-bulk': 'තොග ඇණවුම්',
+                'service-bulk-desc': 'විවාහ, උත්සව සහ විශාල ඇණවුම් සඳහා විශේෂ මිල නියම කිරීම් සහ විශේෂඥතා.',
+                
+                // Contact Section
+                'contact-title': 'සම්බන්ධ වන්න',
+                'contact-intro': 'ඔබගෙන් ඇසීමට අපි කැමතිය! අපගේ භාණ්ඩ ගැන ප්‍රශ්න තිබේ නම්, විශේෂිත ඇණවුමක් ලබා ගැනීමට අවශ්‍ය නම්, හෝ සරලව හෙලෝ කීමට අවශ්‍ය නම්, අපි උදව් කිරීමට සිටිමු.',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-message': 'අපට පණිවිඩයක් යවන්න',
+                'contact-follow': 'අපව අනුගමනය කරන්න',
+                'contact-follow-desc': 'අපගේ නවතම නිර්මාණ සමඟ යාවත්කාලීනව සිටින්න',
+                
+                // Footer
+                'footer-tagline': 'ආදරයෙන් සහ නිර්මාණශීලී භාවයෙන් සාදන ලද',
+                'footer-contact': 'සම්බන්ධ වන්න',
+                'footer-follow': 'අපව අනුගමනය කරන්න',
+                'footer-copyright': '© 2024 Crafterina by Melow. සියලුම අයිතිවාසිකම් ඇවිරිණි.'
+            }
+        };
+
+        // Current language - get from localStorage or default to English
+        let currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Save language preference to localStorage
+            localStorage.setItem('selectedLanguage', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            updateContent();
+        }
+
+        // Function to update content
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // Initialize with saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the correct button as active based on saved language
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${currentLang}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            updateContent();
+        });
+    </script>
+</body>
+</html> 

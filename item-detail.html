@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Crafterina by Melow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-image">
+                    <img src="images/logo.png" alt="Crafterina by Melow Logo">
+                </div>
+                <span class="logo-text">Crafterina by Melow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-translate="nav-about">About Us</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('si')">සිං</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <button id="back-btn" onclick="window.history.back()" class="back-btn">←</button>
+            <div class="product-detail">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="product-image" src="" alt="Product Image">
+                    </div>
+                </div>
+                
+                <div class="product-info-detail">
+                    <h1 id="product-title" data-translate="product-title"></h1>
+                    <div class="product-description">
+                        <p id="product-description" data-translate="product-description"></p>
+                    </div>
+                    
+                    <div class="product-features">
+                        <h3 data-translate="features">Features</h3>
+                        <ul id="product-features">
+                        </ul>
+                    </div>
+                    
+                    <div class="product-materials">
+                        <h3 data-translate="materials">Materials</h3>
+                        <p id="product-materials" data-translate="product-materials"></p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <a href="https://wa.me/94750309299?text=Hi! I'm interested in this product from Crafterina by Melow. Could you please provide more details and pricing?" 
+                           class="whatsapp-btn" target="_blank">
+                            <span class="whatsapp-icon">📱</span>
+                            <span data-translate="check-price">Check Price on WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Crafterina by Melow</h4>
+                    <p data-translate="footer-tagline">Handcrafted with love and creativity</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-contact">Contact</h4>
+                    <p>WhatsApp: +94 75 030 9299</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-follow">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/crafterina_by_melow_" class="social-link">Instagram</a>
+                        <a href="https://www.facebook.com/crafterinaByMelow" class="social-link">Facebook</a>
+                        <a href="https://www.tiktok.com/@crafterina_by_melow" class="social-link">Tiktok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer-copyright">&copy; 2024 Crafterina by Melow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+                 // Product data
+         const products = {
+             1: {
+                 title: "Customised Pens",
+                 image: "images/pen1.jpg",
+                 description: "Beautiful handcrafted resin pens with personalized designs, perfect for gifts or personal use. Each pen is carefully crafted with attention to detail, featuring unique patterns and high-quality resin materials.",
+                 features: [
+                     "Personalized designs",
+                     "High-quality materials",
+                     "Smooth writing experience",
+                     "Perfect gift option",
+                     "Unique and handcrafted"
+                 ],
+                 materials: "High-quality resin, metal components, and quality ink refills"
+             },
+             2: {
+                 title: "Baby Keepsakes",
+                 image: "images/keepsake1.jpg",
+                 description: "Precious resin keepsakes to preserve your baby's precious moments. Each piece is lovingly crafted to capture memories that will last a lifetime, perfect for parents and families.",
+                 features: [
+                     "Personalized baby details",
+                     "High-quality preservation",
+                     "Beautiful presentation",
+                     "Lasting memories",
+                     "Perfect baby gift"
+                 ],
+                 materials: "High-quality resin, archival quality preservation, and elegant frames"
+             },
+             3: {
+                 title: "Flower Preservations",
+                 image: "images/flower.jpg",
+                 description: "Beautiful resin flower preservation services to keep your special moments alive forever. Each preserved flower maintains its natural beauty and color, creating lasting memories.",
+                 features: [
+                     "Natural preservation process",
+                     "Maintains original colors",
+                     "Long-lasting beauty",
+                     "Perfect for special occasions",
+                     "Custom framing available"
+                 ],
+                 materials: "Natural flowers, high-quality resin, and archival materials"
+             },
+             4: {
+                 title: "Name Boards",
+                 image: "images/boards.jpg",
+                 description: "Personalized resin name boards crafted with love and attention to detail. Perfect for children's rooms, nurseries, or as decorative pieces in any home.",
+                 features: [
+                     "Personalized names",
+                     "Beautiful designs",
+                     "Durable construction",
+                     "Easy to hang",
+                     "Perfect room decoration"
+                 ],
+                 materials: "High-quality resin, non-toxic paint, and safe hanging hardware"
+             },
+             5: {
+                 title: "Gifts for Loving Ones",
+                 image: "images/gifts.jpg",
+                 description: "Thoughtful and personalized resin gifts for your loved ones. Each gift is carefully crafted to show your love and appreciation, perfect for any special occasion.",
+                 features: [
+                     "Personalized designs",
+                     "Thoughtful gift options",
+                     "High-quality craftsmanship",
+                     "Perfect for any occasion",
+                     "Made with love"
+                 ],
+                 materials: "High-quality resin, quality components, and personalized touches"
+             },
+             6: {
+                 title: "Name Frames",
+                 image: "images/frame.jpg",
+                 description: "Beautiful personalized resin name frames perfect for displaying in homes, offices, or as gifts. Each frame is crafted with attention to detail and quality resin materials.",
+                 features: [
+                     "Personalized names",
+                     "Elegant designs",
+                     "Quality construction",
+                     "Ready to display",
+                     "Perfect gift option"
+                 ],
+                 materials: "High-quality resin, premium finishes, and safe hanging hardware"
+             },
+             7: {
+                 title: "Wedding Bulk Orders",
+                 image: "images/bulk.jpg",
+                 description: "Special bulk order resin services for weddings and large events. Perfect for wedding favors, guest gifts, or special event souvenirs with personalized touches.",
+                 features: [
+                     "Bulk order discounts",
+                     "Wedding customization",
+                     "Quality assurance",
+                     "Timely delivery",
+                     "Perfect for events"
+                 ],
+                 materials: "High-quality resin, bulk packaging, and quality control"
+             },
+             8: {
+                 title: "Key Tags",
+                 image: "images/tags.jpg",
+                 description: "Personalized resin key tags and accessories perfect for organizing and identifying your keys. Each tag is crafted with durability and style in mind.",
+                 features: [
+                     "Personalized designs",
+                     "Durable construction",
+                     "Easy to identify",
+                     "Perfect for organization",
+                     "Stylish and practical"
+                 ],
+                 materials: "High-quality resin, durable finishes, and secure attachments"
+             },
+             9: {
+                 title: "Dog Name Tags",
+                 image: "images/dog.jpg",
+                 description: "Personalized resin dog name tags and pet accessories crafted with love for your furry friends. Each tag is designed for durability and style.",
+                 features: [
+                     "Personalized pet names",
+                     "Durable construction",
+                     "Safe materials",
+                     "Easy to read",
+                     "Perfect for pets"
+                 ],
+                 materials: "Pet-safe resin materials, durable finishes, and secure attachments"
+             },
+             10: {
+                 title: "Bookmarks",
+                 image: "images/bookmarks.jpg",
+                 description: "Beautiful handcrafted resin bookmarks perfect for book lovers and readers. Each bookmark is designed with unique patterns and quality resin materials.",
+                 features: [
+                     "Unique designs",
+                     "Quality materials",
+                     "Perfect for readers",
+                     "Great gift option",
+                     "Handcrafted with care"
+                 ],
+                 materials: "High-quality resin, decorative elements, and durable finishes"
+             },
+             11: {
+                 title: "Necklaces",
+                 image: "images/necklace.jpg",
+                 description: "Beautiful handcrafted resin necklaces and jewelry pieces perfect for any occasion. Each piece is designed with unique styles and quality resin materials.",
+                 features: [
+                     "Unique designs",
+                     "Quality materials",
+                     "Perfect for gifts",
+                     "Handcrafted with care",
+                     "Beautiful presentation"
+                 ],
+                 materials: "High-quality resin, stones, and decorative elements"
+             },
+             12: {
+                 title: "Earrings",
+                 image: "images/earings.jpg",
+                 description: "Beautiful handcrafted resin earrings perfect for any occasion. Each pair is designed with unique styles and quality resin materials for lasting beauty.",
+                 features: [
+                     "Unique designs",
+                     "Quality materials",
+                     "Perfect for gifts",
+                     "Handcrafted with care",
+                     "Beautiful presentation"
+                 ],
+                 materials: "High-quality resin, stones, and hypoallergenic materials"
+             }
+         };
+
+        // Get product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id') || 1;
+        const product = products[productId];
+
+        // Update page content
+        if (product) {
+            document.getElementById('product-image').src = product.image;
+            document.getElementById('product-image').alt = product.title;
+            document.getElementById('product-title').textContent = product.title;
+            document.getElementById('product-description').textContent = product.description;
+            document.getElementById('product-materials').textContent = product.materials;
+            
+            const featuresList = document.getElementById('product-features');
+            featuresList.innerHTML = '';
+            product.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresList.appendChild(li);
+            });
+        }
+
+        // Language translations
+        const translations = {
+            en: {
+                // Navigation
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                // Product detail
+                'features': 'Features',
+                'materials': 'Materials',
+                'check-price': 'Check Price on WhatsApp',
+                // Footer
+                'footer-tagline': 'Handcrafted with love and creativity',
+                'footer-contact': 'Contact',
+                'footer-follow': 'Follow Us',
+                'footer-copyright': '© 2024 Crafterina by Melow. All rights reserved.',
+                // Product titles
+                'product-title': product ? product.title : '',
+                'product-description': product ? product.description : '',
+                'product-materials': product ? product.materials : ''
+            },
+            si: {
+                // Navigation
+                'nav-home': 'මුල් පිටුව',
+                'nav-about': 'අප ගැන',
+                // Product detail
+                'features': 'විශේෂාංග',
+                'materials': 'භාවිතා කරන ද්‍රව්‍ය',
+                'check-price': 'WhatsApp හරහා මිල පරීක්ෂා කරන්න',
+                // Footer
+                'footer-tagline': 'ආදරයෙන් සහ නිර්මාණශීලී භාවයෙන් සාදන ලද',
+                'footer-contact': 'සම්බන්ධ වන්න',
+                'footer-follow': 'අපව අනුගමනය කරන්න',
+                'footer-copyright': '© 2024 Crafterina by Melow. සියලුම අයිතිවාසිකම් ඇවිරිණි.',
+                // Product titles
+                'product-title': product ? getSinhalaTitle(product.title) : '',
+                'product-description': product ? getSinhalaDescription(product.title) : '',
+                'product-materials': product ? getSinhalaMaterials(product.title) : ''
+            }
+        };
+
+        // Current language - get from localStorage or default to English
+        let currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Save language preference to localStorage
+            localStorage.setItem('selectedLanguage', lang);
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            updateContent();
+        }
+
+        // Function to update content
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // Helper functions for Sinhala translations
+        function getSinhalaTitle(title) {
+            const titleMap = {
+                'Customised Pens': 'පෑන්',
+                'Baby Keepsakes': 'ළදරු මතක සටහන්',
+                'Flower Preservations': 'මල් සංරක්ෂණ',
+                'Name Boards': 'නම පුවරු',
+                'Gifts for Loving Ones': 'ආදරණීය අය සඳහා තෑගි',
+                'Name Frames': 'නම රාමු',
+                'Wedding Bulk Orders': 'විවාහ තෑගි',
+                'Key Tags': 'යතුරු ටැග්',
+                'Dog Name Tags': 'බල්ලාගේ නම ටැග්',
+                'Bookmarks': 'පොත් ලකුණු',
+                'Necklaces': 'මාල',
+                'Earrings': 'කරාබු'
+            };
+            return titleMap[title] || title;
+        }
+
+        function getSinhalaDescription(title) {
+            const descriptionMap = {
+                'Customised Pens': 'ඔබේ ආශාවන්ට අනුව සාදන ලද රෙසින් පෑන, තෑගි සඳහා හෝ පෞද්ගලික භාවිතය සඳහා පරිපූර්ණයි. සෑම පෑනක්ම සැලකිල්ලෙන් සාදන ලද අතර, අද්විතීය රටා සහ උසස් තත්ත්වයේ රෙසින් ද්‍රව්‍ය භාවිතා කරයි.',
+                'Baby Keepsakes': 'ඔබේ ළදරුවාගේ මතක සටහන් සංරක්ෂණය කිරීම සඳහා වටිනා රෙසින් මතක සටහන්. සෑම කෑල්ලක්ම ආදරයෙන් සාදන ලද අතර, ජීවිත කාලයක් පවතින මතක සටහන් ගබඩා කරයි.',
+                'Flower Preservations': 'ඔබේ විශේෂ මොහොතුන් සදහටම ජීවතුන් අතර තබා ගැනීම සඳහා රෙසින් මල් සංරක්ෂණ සේවා. සෑම සංරක්ෂිත මලක්ම එහි ස්වභාවික අලංකාරය සහ වර්ණය පවත්වා ගනියි.',
+                'Name Boards': 'ආදරයෙන් සහ සැලකිල්ලෙන් සාදන ලද රෙසින් නම පුවරු. ළදරු කාමර, ළදරු නිවාස, හෝ ඕනෑම නිවසක ආලංකාරික කෑල්ලක් ලෙස පරිපූර්ණයි.',
+                'Gifts for Loving Ones': 'ඔබේ ආදරණීය අය සඳහා සිතුවිලි සහිත රෙසින් තෑගි. සෑම තෑග්ගක්ම ඔබේ ආදරය සහ ඇගයීම පෙන්වීම සඳහා සැලකිල්ලෙන් සාදන ලද අතර, ඕනෑම විශේෂ අවස්ථාවක් සඳහා පරිපූර්ණයි.',
+                'Name Frames': 'නිවස්, කාර්යාල, හෝ තෑගි ලෙස පෙන්වීම සඳහා පරිපූර්ණ රෙසින් නම රාමු. සෑම රාමුවක්ම සැලකිල්ලෙන් සහ උසස් තත්ත්වයේ රෙසින් ද්‍රව්‍ය සමඟ සාදන ලද අතර.',
+                'Wedding Bulk Orders': 'විවාහ සහ විශාල උත්සව සඳහා විශේෂ රෙසින් තෑගි සේවා. විවාහ තෑගි, ආගන්තුක තෑගි, හෝ විශේෂ උත්සව සිහිකැඳුම් සඳහා පරිපූර්ණයි.',
+                'Key Tags': 'ඔබේ යතුරු සංවිධානය කිරීම සහ හඳුනා ගැනීම සඳහා පරිපූර්ණ රෙසින් යතුරු ටැග්. සෑම ටැග් එකක්ම තදකම සහ ශෛලිය සඳහා සාදන ලද අතර.',
+                'Dog Name Tags': 'ඔබේ සතුන් සඳහා ආදරයෙන් සාදන ලද රෙසින් බල්ලාගේ නම ටැග්. සෑම ටැග් එකක්ම තදකම සහ ශෛලිය සඳහා සැලසුම් කර ඇත.',
+                'Bookmarks': 'පොත් කියවන්නන් සහ කියවන්නන් සඳහා පරිපූර්ණ රෙසින් පොත් ලකුණු. සෑම පොත් ලකුණක්ම අද්විතීය රටා සහ උසස් තත්ත්වයේ රෙසින් ද්‍රව්‍ය සමඟ සැලසුම් කර ඇත.',
+                'Necklaces': 'ඕනෑම අවස්ථාවක් සඳහා පරිපූර්ණ රෙසින් මාල සහ ආභරණ. සෑම කෑල්ලක්ම අද්විතීය ශෛලි සහ උසස් තත්ත්වයේ රෙසින් ද්‍රව්‍ය සමඟ සැලසුම් කර ඇත.',
+                'Earrings': 'ඕනෑම අවස්ථාවක් සඳහා පරිපූර්ණ රෙසින් කණවැන්. සෑම යුගලයක්ම අද්විතීය ශෛලි සහ උසස් තත්ත්වයේ රෙසින් ද්‍රව්‍ය සමඟ සැලසුම් කර ඇත.'
+            };
+            return descriptionMap[title] || title;
+        }
+
+        function getSinhalaMaterials(title) {
+            const materialsMap = {
+                'Customised Pens': 'උසස් තත්ත්වයේ රෙසින්, ලෝහ සංරචක, සහ උසස් තත්ත්වයේ තීන්ත පුරවන',
+                'Baby Keepsakes': 'උසස් තත්ත්වයේ රෙසින්, ගොනු තත්ත්වයේ සංරක්ෂණ, සහ ආලංකාරික රාමු',
+                'Flower Preservations': 'ස්වභාවික මල්, උසස් තත්ත්වයේ රෙසින්, සහ ගොනු ද්‍රව්‍ය',
+                'Name Boards': 'උසස් තත්ත්වයේ රෙසින්, විෂ නොවන තීන්ත, සහ ආරක්ෂිත එල්ලීමේ උපකරණ',
+                'Gifts for Loving Ones': 'උසස් තත්ත්වයේ රෙසින්, උසස් තත්ත්වයේ සංරචක, සහ පෞද්ගලික ස්පර්ශ',
+                'Name Frames': 'උසස් තත්ත්වයේ රෙසින්, උසස් තත්ත්වයේ අවසන් කිරීම්, සහ ආරක්ෂිත එල්ලීමේ උපකරණ',
+                'Wedding Bulk Orders': 'උසස් තත්ත්වයේ රෙසින්, තෑගි ඇසුරුම්, සහ උසස් තත්ත්වයේ පාලනය',
+                'Key Tags': 'උසස් තත්ත්වයේ රෙසින්, තද අවසන් කිරීම්, සහ ආරක්ෂිත ඇමුණුම්',
+                'Dog Name Tags': 'සතුන් සඳහා ආරක්ෂිත රෙසින් ද්‍රව්‍ය, තද අවසන් කිරීම්, සහ ආරක්ෂිත ඇමුණුම්',
+                'Bookmarks': 'උසස් තත්ත්වයේ රෙසින්, ආලංකාරික සංරචක, සහ තද අවසන් කිරීම්',
+                'Necklaces': 'උසස් තත්ත්වයේ රෙසින්, ගල්, සහ ආලංකාරික සංරචක',
+                'Earrings': 'උසස් තත්ත්වයේ රෙසින්, ගල්, සහ අධි-ඇලර්ජික ද්‍රව්‍ය'
+            };
+            return materialsMap[title] || title;
+        }
+
+        // Initialize with saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the correct button as active based on saved language
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${currentLang}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            updateContent();
+        });
+
+        function updateBackButton() {
+            const backBtn = document.getElementById('back-btn');
+            backBtn.textContent = '←';
+        }
+    </script>
+</body>
+</html> 

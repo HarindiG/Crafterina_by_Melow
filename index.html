@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafterina by Melow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logo.png" type="image/jpg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-image">
+                    <img src="images/logo.png" alt="Crafterina by Melow Logo">
+                </div>
+                <span class="logo-text">Crafterina by Melow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-translate="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-translate="nav-about">About Us</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('en')">EN</button>
+                    <button class="lang-btn" onclick="switchLanguage('si')">සිං</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <header class="hero">
+                <h1 data-translate="hero-title">Welcome to Crafterina by Melow</h1>
+                <p data-translate="hero-subtitle">Discover unique handcrafted treasures made with love and creativity</p>
+            </header>
+
+            <section class="products-grid">
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=1'">
+                    <div class="product-image">
+                        <img src="images/pen1.jpg" alt="Handcrafted Dreamcatcher">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-pens">Customised Pens</h3>
+                         <p data-translate="desc-pens">Beautiful handcrafted resin pens with personalized designs, perfect for gifts or personal use.</p>
+                     </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=2'">
+                    <div class="product-image">
+                        <img src="images/keepsake1.jpg" alt="Mandala Wall Art">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-keepsakes">Baby Keepsakes</h3>
+                         <p data-translate="desc-keepsakes">Precious resin keepsakes to preserve your baby's precious moments with lasting memories.</p>
+                     </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=3'">
+                    <div class="product-image">
+                        <img src="images/flower.jpg" alt="Bohemian Earrings">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-flowers">Flower Preservations</h3>
+                         <p data-translate="desc-flowers">Beautiful resin flower preservation services to keep your special moments alive forever.</p>
+                     </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=4'">
+                    <div class="product-image">
+                        <img src="images/boards.jpg" alt="Peacock Feather Art">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-boards">Name Boards</h3>
+                         <p data-translate="desc-boards">Personalized resin name boards crafted with love and attention to detail for any room.</p>
+                     </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=5'">
+                    <div class="product-image">
+                        <img src="images/gifts.jpg" alt="Handwoven Basket">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-gifts">Gifts for Loving Ones</h3>
+                         <p data-translate="desc-gifts">Thoughtful and personalized resin gifts for your loved ones, perfect for any special occasion.</p>
+                     </div>
+                </div>
+
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=6'">
+                    <div class="product-image">
+                        <img src="images/frame.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-frames">Name Frames</h3>
+                         <p data-translate="desc-frames">Beautiful personalized resin name frames perfect for displaying in homes, offices, or as gifts.</p>
+                     </div>
+                    
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=7'">
+                    <div class="product-image">
+                        <img src="images/bulk.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-bulk">Wedding Bulk Orders</h3>
+                         <p data-translate="desc-bulk">Special bulk order resin services for weddings and large events with personalized touches.</p>
+                     </div>
+                    
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=8'">
+                    <div class="product-image">
+                        <img src="images/tags.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-tags">Key Tags</h3>
+                         <p data-translate="desc-tags">Personalized resin key tags and accessories perfect for organizing and identifying your keys.</p>
+                     </div>
+                    
+                </div>
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=9'">
+                    <div class="product-image">
+                        <img src="images/dog.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-dog-tags">Dog Name Tags</h3>
+                         <p data-translate="desc-dog-tags">Personalized resin dog name tags and pet accessories crafted with love for your furry friends.</p>
+                     </div>
+                    
+                </div>
+                
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=10'">
+                    <div class="product-image">
+                        <img src="images/bookmarks.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-bookmarks">Bookmarks</h3>
+                         <p data-translate="desc-bookmarks">Beautiful handcrafted resin bookmarks perfect for book lovers and readers.</p>
+                     </div>
+                    
+                </div>
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=11'">
+                    <div class="product-image">
+                        <img src="images/necklace.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-necklaces">Necklaces</h3>
+                         <p data-translate="desc-necklaces">Beautiful handcrafted resin necklaces and jewelry pieces perfect for any occasion.</p>
+                     </div>
+                    
+                </div>
+                <div class="product-card" onclick="window.location.href='item-detail.html?id=12'">
+                    <div class="product-image">
+                        <img src="images/earings.jpg" alt="Ceramic Vase">
+                    </div>
+                                         <div class="product-info">
+                         <h3 data-translate="product-earrings">Earrings</h3>
+                         <p data-translate="desc-earrings">Beautiful handcrafted resin earrings perfect for any occasion with unique designs.</p>
+                     </div>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                                 <div class="footer-section">
+                     <h4>Crafterina by Melow</h4>
+                     <p data-translate="footer-tagline">Handcrafted with love and creativity</p>
+                 </div>
+                                 <div class="footer-section">
+                     <h4 data-translate="footer-contact">Contact</h4>
+                     <p>WhatsApp: +94 75 030 9299</p>
+                 </div>
+                <div class="footer-section">
+                    <h4 data-translate="footer-follow">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/crafterina_by_melow_" class="social-link">Instagram</a>
+                        <a href="https://www.facebook.com/crafterinaByMelow" class="social-link">Facebook</a>
+                        <a href="https://www.tiktok.com/@crafterina_by_melow" class="social-link">Tiktok</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer-copyright">&copy; 2024 Crafterina by Melow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language translations
+        const translations = {
+            en: {
+                // Navigation
+                'nav-home': 'Home',
+                'nav-about': 'About Us',
+                
+                // Hero Section
+                'hero-title': 'Welcome to Crafterina by Melow',
+                'hero-subtitle': 'Discover unique handcrafted treasures made with love and creativity',
+                
+                // Product Names
+                'product-pens': 'Customised Pens',
+                'product-keepsakes': 'Baby Keepsakes',
+                'product-flowers': 'Flower Preservations',
+                'product-boards': 'Name Boards',
+                'product-gifts': 'Gifts for Loving Ones',
+                'product-frames': 'Name Frames',
+                'product-bulk': 'Wedding Bulk Orders',
+                'product-tags': 'Key Tags',
+                'product-dog-tags': 'Dog Name Tags',
+                'product-bookmarks': 'Bookmarks',
+                'product-necklaces': 'Necklaces',
+                'product-earrings': 'Earrings',
+                
+                // Product Descriptions
+                'desc-pens': 'Beautiful handcrafted resin pens with personalized designs, perfect for gifts or personal use.',
+                'desc-keepsakes': 'Precious resin keepsakes to preserve your baby\'s precious moments with lasting memories.',
+                'desc-flowers': 'Beautiful resin flower preservation services to keep your special moments alive forever.',
+                'desc-boards': 'Personalized resin name boards crafted with love and attention to detail for any room.',
+                'desc-gifts': 'Thoughtful and personalized resin gifts for your loved ones, perfect for any special occasion.',
+                'desc-frames': 'Beautiful personalized resin name frames perfect for displaying in homes, offices, or as gifts.',
+                'desc-bulk': 'Special bulk order resin services for weddings and large events with personalized touches.',
+                'desc-tags': 'Personalized resin key tags and accessories perfect for organizing and identifying your keys.',
+                'desc-dog-tags': 'Personalized resin dog name tags and pet accessories crafted with love for your furry friends.',
+                'desc-bookmarks': 'Beautiful handcrafted resin bookmarks perfect for book lovers and readers.',
+                'desc-necklaces': 'Beautiful handcrafted resin necklaces and jewelry pieces perfect for any occasion.',
+                'desc-earrings': 'Beautiful handcrafted resin earrings perfect for any occasion with unique designs.',
+                
+                // Footer
+                'footer-tagline': 'Handcrafted with love and creativity',
+                'footer-contact': 'Contact',
+                'footer-follow': 'Follow Us',
+                'footer-copyright': '© 2024 Crafterina by Melow. All rights reserved.'
+            },
+            si: {
+                // Navigation
+                'nav-home': 'මුල් පිටුව',
+                'nav-about': 'අප ගැන',
+                
+                // Hero Section
+                'hero-title': 'ක්‍රැෆ්ටරිනා බයි මෙලෝ වෙත සාදරයෙන් පිළිගනිමු',
+                'hero-subtitle': 'ආදරයෙන් හා නිර්මාණශීලීත්වයෙන් සාදන ලද අනන්‍ය අතින් සාදන ලද නිධන් සොයා ගන්න',
+                
+                // Product Names
+                'product-pens': 'පෑන්',
+                'product-keepsakes': 'ළදරු සිහිකැඳි',
+                'product-flowers': 'මල් සංරක්ෂණ',
+                'product-boards': 'නම පුවරු',
+                'product-gifts': 'ආදරණීය අය සඳහා තෑගි',
+                'product-frames': 'නම රාමු',
+                'product-bulk': 'විවාහ තොග ඇණවුම්',
+                'product-tags': 'යතුරු ටැග්',
+                'product-dog-tags': 'බල්ලාගේ නම ටැග්',
+                'product-bookmarks': 'පොත් ලකුණු',
+                'product-necklaces': 'මාල',
+                'product-earrings': 'කරාබු',
+                
+                // Product Descriptions
+                'desc-pens': 'විශේෂඥ නිර්මාණ සහිත අතින් සාදන ලද රෙසින් පෑන, තෑගි හෝ පෞද්ගලික භාවිතය සඳහා පරිපූර්ණ.',
+                'desc-keepsakes': 'ඔබේ දරුවාගේ මෘදු මොහොත සංරක්ෂණය කිරීමට අනන්‍ය රෙසින් සිහිකැඳි.',
+                'desc-flowers': 'ඔබේ විශේෂ මොහොත සදාකාලිකව ජීවතුන් අතර තබා ගැනීමට රෙසින් මල් සංරක්ෂණ සේවා.',
+                'desc-boards': 'ආදරයෙන් හා අවධානයෙන් සාදන ලද රෙසින් නම පුවරු, ඕනෑම කාමරයක් සඳහා.',
+                'desc-gifts': 'ඔබේ ආදරණීය අය සඳහා සිතෙන් සාදන ලද රෙසින් තෑගි, ඕනෑම විශේෂ අවස්ථාවක් සඳහා.',
+                'desc-frames': 'නිවස්, කාර්යාල හෝ තෑගි ලෙස පෙන්වීමට පරිපූර්ණ රෙසින් නම රාමු.',
+                'desc-bulk': 'විවාහ සහ විශාල උත්සව සඳහා විශේෂ තොග රෙසින් සේවා, විශේෂඥ ස්පර්ශ සහිත.',
+                'desc-tags': 'ඔබේ යතුරු සංවිධානය කිරීමට හා හඳුනා ගැනීමට පරිපූර්ණ රෙසින් යතුරු ටැග්.',
+                'desc-dog-tags': 'ඔබේ සතුන් සඳහා ආදරයෙන් සාදන ලද රෙසින් බල්ලාගේ නම ටැග්.',
+                'desc-bookmarks': 'පොත් කියවන්නන් සඳහා පරිපූර්ණ අතින් සාදන ලද රෙසින් පොත් ලකුණු.',
+                'desc-necklaces': 'ඕනෑම අවස්ථාවක් සඳහා පරිපූර්ණ අතින් සාදන ලද රෙසින් මාල.',
+                'desc-earrings': 'අනන්‍ය නිර්මාණ සහිත ඕනෑම අවස්ථාවක් සඳහා පරිපූර්ණ අතින් සාදන ලද රෙසින් කණවැල්.',
+                
+                // Footer
+                'footer-tagline': 'ආදරයෙන් හා නිර්මාණශීලීත්වයෙන් සාදන ලද',
+                'footer-contact': 'සම්බන්ධතා',
+                'footer-follow': 'අපව අනුගමනය කරන්න',
+                'footer-copyright': '© 2024 ක්‍රැෆ්ටරිනා බයි මෙලෝ. සියලුම අයිතිවාසිකම් ඇවිරිණි.'
+            }
+        };
+
+        // Current language
+        let currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Save language preference to localStorage
+            localStorage.setItem('selectedLanguage', lang);
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Update all translatable elements
+            updateContent();
+        }
+
+        // Function to update content
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLang][key]) {
+                    element.textContent = translations[currentLang][key];
+                }
+            });
+        }
+
+        // Initialize with saved language preference
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the correct button as active based on saved language
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeButton = document.querySelector(`.lang-btn[onclick="switchLanguage('${currentLang}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            updateContent();
+        });
+    </script>
+</body>
+</html> 
