@@ -35,8 +35,18 @@
             <button id="back-btn" onclick="window.history.back()" class="back-btn">←</button>
             <div class="product-detail">
                 <div class="product-images">
-                    <div class="main-image">
-                        <img id="product-image" src="" alt="Product Image">
+                    <div class="image-gallery">
+                        <button class="nav-arrow prev-arrow" onclick="changeImage(-1)">‹</button>
+                        <div class="main-image">
+                            <img id="product-image" src="" alt="Product Image">
+                        </div>
+                        <button class="nav-arrow next-arrow" onclick="changeImage(1)">›</button>
+                        <div class="image-indicators">
+                            <span class="indicator active" onclick="goToImage(0)"></span>
+                            <span class="indicator" onclick="goToImage(1)"></span>
+                            <span class="indicator" onclick="goToImage(2)"></span>
+                            <span class="indicator" onclick="goToImage(3)"></span>
+                        </div>
                     </div>
                 </div>
                 
@@ -101,7 +111,12 @@
          const products = {
              1: {
                  title: "Customised Pens",
-                 image: "images/pen1.jpg",
+                 images: [
+                     "images/pen1.jpg",
+                     "images/pen2.jpg", // You can add more pen images here
+                     "images/pen3.jpg",
+                     "images/pen4.jpg"
+                 ],
                  description: "Beautiful handcrafted resin pens with personalized designs, perfect for gifts or personal use. Each pen is carefully crafted with attention to detail, featuring unique patterns and high-quality resin materials.",
                  features: [
                      "Personalized designs",
@@ -114,7 +129,12 @@
              },
              2: {
                  title: "Baby Keepsakes",
-                 image: "images/keepsake1.jpg",
+                 images: [
+                     "images/keepsake1.jpg",
+                     "images/keepsake2.jpg", // You can add more keepsake images here
+                     "images/keepsake3.jpg",
+                     "images/keepsake4.jpg"
+                 ],
                  description: "Precious resin keepsakes to preserve your baby's precious moments. Each piece is lovingly crafted to capture memories that will last a lifetime, perfect for parents and families.",
                  features: [
                      "Personalized baby details",
@@ -127,7 +147,12 @@
              },
              3: {
                  title: "Flower Preservations",
-                 image: "images/flower.jpg",
+                 images: [
+                     "images/flower1.jpg",
+                     "images/flower2.jpg", // You can add more flower images here
+                     "images/flower3.jpg",
+                     "images/flower4.jpg"
+                 ],
                  description: "Beautiful resin flower preservation services to keep your special moments alive forever. Each preserved flower maintains its natural beauty and color, creating lasting memories.",
                  features: [
                      "Natural preservation process",
@@ -140,7 +165,12 @@
              },
              4: {
                  title: "Name Boards",
-                 image: "images/boards.jpg",
+                 images: [
+                     "images/boards1.jpg",
+                     "images/boards2.jpg", // You can add more board images here
+                     "images/boards3.jpg",
+                     "images/boards4.jpg"
+                 ],
                  description: "Personalized resin name boards crafted with love and attention to detail. Perfect for children's rooms, nurseries, or as decorative pieces in any home.",
                  features: [
                      "Personalized names",
@@ -153,7 +183,12 @@
              },
              5: {
                  title: "Gifts for Loving Ones",
-                 image: "images/gifts.jpg",
+                 images: [
+                     "images/gifts1.jpg",
+                     "images/gifts2.jpg", // You can add more gift images here
+                     "images/gifts3.jpg",
+                     "images/gifts4.jpg"
+                 ],
                  description: "Thoughtful and personalized resin gifts for your loved ones. Each gift is carefully crafted to show your love and appreciation, perfect for any special occasion.",
                  features: [
                      "Personalized designs",
@@ -166,7 +201,12 @@
              },
              6: {
                  title: "Name Frames",
-                 image: "images/frame.jpg",
+                 images: [
+                     "images/frame1.jpg",
+                     "images/frame2.jpg", // You can add more frame images here
+                     "images/frame3.jpg",
+                     "images/frame4.jpg"
+                 ],
                  description: "Beautiful personalized resin name frames perfect for displaying in homes, offices, or as gifts. Each frame is crafted with attention to detail and quality resin materials.",
                  features: [
                      "Personalized names",
@@ -179,7 +219,12 @@
              },
              7: {
                  title: "Wedding Bulk Orders",
-                 image: "images/bulk.jpg",
+                 images: [
+                     "images/bulk1.jpg",
+                     "images/bulk2.jpg", // You can add more bulk order images here
+                     "images/bulk3.jpg",
+                     "images/bulk4.jpg"
+                 ],
                  description: "Special bulk order resin services for weddings and large events. Perfect for wedding favors, guest gifts, or special event souvenirs with personalized touches.",
                  features: [
                      "Bulk order discounts",
@@ -192,7 +237,12 @@
              },
              8: {
                  title: "Key Tags",
-                 image: "images/tags.jpg",
+                 images: [
+                     "images/tags1.jpg",
+                     "images/tags2.jpg", // You can add more tag images here
+                     "images/tags3.jpg",
+                     "images/tags4.jpg"
+                 ],
                  description: "Personalized resin key tags and accessories perfect for organizing and identifying your keys. Each tag is crafted with durability and style in mind.",
                  features: [
                      "Personalized designs",
@@ -205,7 +255,12 @@
              },
              9: {
                  title: "Dog Name Tags",
-                 image: "images/dog.jpg",
+                 images: [
+                     "images/dog1.jpg",
+                     "images/dog2.jpg", // You can add more dog tag images here
+                     "images/dog3.jpg",
+                     "images/dog4.jpg"
+                 ],
                  description: "Personalized resin dog name tags and pet accessories crafted with love for your furry friends. Each tag is designed for durability and style.",
                  features: [
                      "Personalized pet names",
@@ -218,7 +273,12 @@
              },
              10: {
                  title: "Bookmarks",
-                 image: "images/bookmarks.jpg",
+                 images: [
+                     "images/bookmarks1.jpg",
+                     "images/bookmarks2.jpg", // You can add more bookmark images here
+                     "images/bookmarks3.jpg",
+                     "images/bookmarks4.jpg"
+                 ],
                  description: "Beautiful handcrafted resin bookmarks perfect for book lovers and readers. Each bookmark is designed with unique patterns and quality resin materials.",
                  features: [
                      "Unique designs",
@@ -231,7 +291,12 @@
              },
              11: {
                  title: "Necklaces",
-                 image: "images/necklace.jpg",
+                 images: [
+                     "images/necklace1.jpg",
+                     "images/necklace2.jpg", // You can add more necklace images here
+                     "images/necklace3.jpg",
+                     "images/necklace4.jpg"
+                 ],
                  description: "Beautiful handcrafted resin necklaces and jewelry pieces perfect for any occasion. Each piece is designed with unique styles and quality resin materials.",
                  features: [
                      "Unique designs",
@@ -244,7 +309,12 @@
              },
              12: {
                  title: "Earrings",
-                 image: "images/earings.jpg",
+                 images: [
+                     "images/earings1.jpg",
+                     "images/earings2.jpg", // You can add more earring images here
+                     "images/earings3.jpg",
+                     "images/earings4.jpg"
+                 ],
                  description: "Beautiful handcrafted resin earrings perfect for any occasion. Each pair is designed with unique styles and quality resin materials for lasting beauty.",
                  features: [
                      "Unique designs",
@@ -261,10 +331,19 @@
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id') || 1;
         const product = products[productId];
+        
+        // Image gallery variables
+        let currentImageIndex = 0;
+        let productImages = [];
 
         // Update page content
         if (product) {
-            document.getElementById('product-image').src = product.image;
+            productImages = product.images || [product.image];
+            updateProductDisplay();
+        }
+
+        function updateProductDisplay() {
+            document.getElementById('product-image').src = productImages[currentImageIndex];
             document.getElementById('product-image').alt = product.title;
             document.getElementById('product-title').textContent = product.title;
             document.getElementById('product-description').textContent = product.description;
@@ -277,6 +356,61 @@
                 li.textContent = feature;
                 featuresList.appendChild(li);
             });
+            
+            updateImageIndicators();
+            updateNavigationArrows();
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            
+            if (currentImageIndex < 0) {
+                currentImageIndex = productImages.length - 1;
+            } else if (currentImageIndex >= productImages.length) {
+                currentImageIndex = 0;
+            }
+            
+            document.getElementById('product-image').src = productImages[currentImageIndex];
+            updateImageIndicators();
+            updateNavigationArrows();
+        }
+
+        function goToImage(index) {
+            if (index >= 0 && index < productImages.length) {
+                currentImageIndex = index;
+                document.getElementById('product-image').src = productImages[currentImageIndex];
+                updateImageIndicators();
+                updateNavigationArrows();
+            }
+        }
+
+        function updateImageIndicators() {
+            const indicators = document.querySelectorAll('.indicator');
+            indicators.forEach((indicator, index) => {
+                if (index < productImages.length) {
+                    indicator.style.display = 'inline-block';
+                    if (index === currentImageIndex) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                } else {
+                    indicator.style.display = 'none';
+                }
+            });
+        }
+
+        function updateNavigationArrows() {
+            const prevArrow = document.querySelector('.prev-arrow');
+            const nextArrow = document.querySelector('.next-arrow');
+            
+            if (productImages.length <= 1) {
+                prevArrow.style.display = 'none';
+                nextArrow.style.display = 'none';
+            } else {
+                prevArrow.style.display = 'block';
+                nextArrow.style.display = 'block';
+            }
         }
 
         // Language translations
