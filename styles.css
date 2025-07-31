@@ -1637,19 +1637,20 @@ body {
     }
     
     .main-image {
-        height: 400px !important;
+        height: auto !important;
+        min-height: 400px !important;
         border-radius: 12px !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
     
     .main-image img {
         width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
+        height: auto !important;
+        object-fit: contain !important;
         border-radius: 12px !important;
         margin: 0 !important;
         padding: 0 !important;
@@ -1719,22 +1720,29 @@ body {
     }
     
     .main-image {
-        height: 350px !important;
+        height: auto !important;
+        min-height: 350px !important;
         border-radius: 8px !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1) !important;
+        overflow: visible !important;
     }
     
     .main-image img {
         width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
+        height: auto !important;
+        object-fit: contain !important;
         border-radius: 8px !important;
         margin: 0 !important;
         padding: 0 !important;
         display: block !important;
+    }
+    
+    .image-indicators {
+        bottom: 6px !important;
+        gap: 5px !important;
     }
     
     .product-info-detail {
@@ -1768,12 +1776,18 @@ body {
 }
 
 @media (max-width: 360px) {
+    .container {
+        padding: 0 8px !important;
+    }
+    
     .main-image {
-        height: 300px !important;
+        height: auto !important;
+        min-height: 300px !important;
         border-radius: 6px !important;
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
+        overflow: visible !important;
     }
     
     .main-image img {
@@ -1781,8 +1795,14 @@ body {
         margin: 0 !important;
         padding: 0 !important;
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
         display: block !important;
+    }
+    
+    .image-indicators {
+        bottom: 5px !important;
+        gap: 4px !important;
     }
     
     .product-info-detail {
