@@ -404,12 +404,19 @@
             const prevArrow = document.querySelector('.prev-arrow');
             const nextArrow = document.querySelector('.next-arrow');
             
-            if (productImages.length <= 1) {
-                prevArrow.style.display = 'none';
-                nextArrow.style.display = 'none';
-            } else {
+            // Always show arrows for better UX, even with single image
+            if (prevArrow && nextArrow) {
                 prevArrow.style.display = 'block';
                 nextArrow.style.display = 'block';
+                
+                // Add visual feedback for single image
+                if (productImages.length <= 1) {
+                    prevArrow.style.opacity = '0.5';
+                    nextArrow.style.opacity = '0.5';
+                } else {
+                    prevArrow.style.opacity = '1';
+                    nextArrow.style.opacity = '1';
+                }
             }
         }
 
@@ -495,7 +502,7 @@
                 'Dog Name Tags': 'බල්ලාගේ නම ටැග්',
                 'Bookmarks': 'පොත් ලකුණු',
                 'Necklaces': 'මාල',
-                'Earrings': 'කරාබු'
+                 'Earrings': 'කණවැන්'
             };
             return titleMap[title] || title;
         }
@@ -535,6 +542,34 @@
             };
             return materialsMap[title] || title;
         }
+
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (product) {
+                updateProductDisplay();
+                console.log('Gallery initialized with', productImages.length, 'images');
+            }
+        });
+
+        // Fallback initialization
+        window.addEventListener('load', function() {
+            if (product && productImages.length > 0) {
+                updateProductDisplay();
+                console.log('Fallback gallery initialization');
+            }
+        });
+
+        // Ensure arrows are visible
+        setTimeout(function() {
+            const prevArrow = document.querySelector('.prev-arrow');
+            const nextArrow = document.querySelector('.next-arrow');
+            if (prevArrow && nextArrow) {
+                prevArrow.style.display = 'block';
+                nextArrow.style.display = 'block';
+                prevArrow.style.opacity = '1';
+                nextArrow.style.opacity = '1';
+            }
+        }, 1000);
 
         // Initialize with saved language preference
         document.addEventListener('DOMContentLoaded', function() {
